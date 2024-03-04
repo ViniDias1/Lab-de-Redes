@@ -18,7 +18,7 @@ def novogrupo():
         subprocess.run(['groupadd', grupo ])
 
     except: 
-         print(f"Erro ao criar grupo.")                      
+         print("Erro ao criar grupo")                      
          sys.exit(1)
 
 # criar diretorio
@@ -28,7 +28,7 @@ def novodir():
         subprocess.run(['mkdir', "-p", diretorio ])
 
     except: 
-         print(f"Erro ao criar diretorio.")                      
+         print("Erro ao criar diretorio")                      
          sys.exit(1) 
 
 # adicionar o usuario
@@ -39,7 +39,7 @@ def novaconta():
          subprocess.run(['useradd', '-c', comentario, '-d', diretorio, '-g', grupo, '-M', '-s', '/sbin/nologin', '-p', senha, usuario ])
 
     except: 
-         print(f"Erro ao criar usuario.")                      
+         print("Erro ao criar usuario")                      
          sys.exit(1)
 
 novogrupo()
